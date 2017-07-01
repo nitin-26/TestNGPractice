@@ -1,0 +1,11 @@
+package com.test.mavenTestNGDemo;
+
+public class NewTest {
+	
+	@Test
+	Public void demoTest()
+	{
+		System.out.println("Test print");
+	}
+
+}
