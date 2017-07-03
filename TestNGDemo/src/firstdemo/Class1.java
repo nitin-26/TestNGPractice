@@ -1,27 +1,36 @@
 package firstdemo;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class Class1 {
-  @Test
-  public void f() {
+	static int a=0;
+  @Test(priority=3)
+  public void f1() {
+	  System.out.println("Test in class 1 f1 method");
+	  System.out.println("value of a"+a);
   }
-  @BeforeClass
-  public void beforeClass() {
-	   System.out.println("Class1 beforeclass");
-	  
+  
+  @BeforeMethod
+  public void testMethod()
+  {
+	  System.out.println("Method executed");
+	  a++;
   }
-
-  @AfterClass
-  public void afterClass() {
-	  System.out.println("Class1 afterclass");
+  @Test(priority=2)
+  public void f2() {
+	  System.out.println("Test in class 1 f2 method");
+	  System.out.println("value of a"+a);
   }
-
-  @BeforeTest
+  @Test(priority=1)
+  public void f3() {
+	  System.out.println("Test in class 1 f3 method");
+	  System.out.println("value of a"+a);
+  }
+   @BeforeTest
   public void beforeTest() {
 	  System.out.println("Class1 beforetest");
   }
@@ -31,4 +40,5 @@ public class Class1 {
 	  System.out.println("Class1 aftertest");
   }
 
+  
 }

@@ -1,33 +1,25 @@
 package firstdemo;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class Class3 {
-  @Test
-  public void f() {
-  }
-  @BeforeClass
-  public void beforeClass() {
-	  System.out.println("Class3 beforeclass");
-  }
+	@Test
+	public void f() {
 
-  @AfterClass
-  public void afterClass() {
-	  System.out.println("Class3 afterclass");
-  }
+		System.out.println("Test of CLass 3");
+	}
 
-  @BeforeTest
-  public void beforeTest() {
-	  System.out.println("Class3 beforetest");
-  }
+	@BeforeTest
+	public void beforeTest() {
+		System.out.println("Class3 beforetest");
+	}
 
-  @AfterTest
-  public void afterTest() {
-	  System.out.println("Class3 aftertest");
-  }
+	@AfterTest
+	public void afterTest() {
+		System.out.println("Class3 aftertest");
+	}
+	
 
 }
